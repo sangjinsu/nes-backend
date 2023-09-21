@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    container_name: nes-db
+    stdin_open: true
+    tty: true
+    restart: always
+    volumes:
+      - ./db/:/root/db/
+    platform: linux/amd64
+    privileged: true
